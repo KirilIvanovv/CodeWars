@@ -1,0 +1,25 @@
+using System;
+using System.Linq;
+​
+public class Printer 
+{
+    public static string PrinterError(String s) 
+    {
+      char[] arr = s.ToCharArray();
+      
+      string str = "";
+        
+      string check = "abcdefghijklm";
+      
+      foreach(char c in arr)
+      {
+        if(!check.Contains(c))
+        {
+          str += c;
+        }
+      }
+      
+      string result = $"{str.Length}/{s.Length}";
+      return result;
+    }
+}
